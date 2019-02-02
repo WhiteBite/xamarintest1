@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App5"
+             x:Class="App5.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label x:Name="Label_kek" Text="Notissimus test!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <ListView x:Name="offers_ListView"
+                  HasUnevenRows="True"
+                  HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell x:Name="OfferCell"  >
+                        <StackLayout>
+                            <Label Text="{Binding Id}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+
+</ContentPage>
